@@ -8,6 +8,7 @@
  * @format
  */
 
+import "./UXCamProvider"
 import React, {type PropsWithChildren} from 'react';
 import {
   SafeAreaView,
