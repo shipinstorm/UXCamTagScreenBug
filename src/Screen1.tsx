@@ -1,12 +1,6 @@
 import React, { FC } from 'react';
 import { Button, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
-import {
-    Colors,
-    DebugInstructions,
-    Header,
-    LearnMoreLinks,
-    ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
 import { Section } from './components/Section';
 
 export const Screen1: FC<any> = ({ navigation }) => {
@@ -25,19 +19,10 @@ export const Screen1: FC<any> = ({ navigation }) => {
             <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
                 <Header />
                 <View style={{ backgroundColor: isDarkMode ? Colors.black : Colors.white }}>
-                    <Section title="Step One">
-                        Edit <Text style={styles.highlight}>Screen1.tsx</Text> to change this screen and then come back
-                        to see your edits.
+                    <Section title="Screen1.tsx">
+                        You are currently on <Text style={styles.highlight}>Screen1.tsx</Text>.
                     </Section>
-                    <Button title="Go to Screen2... again" onPress={() => navigation.push('Screen2')} />
-                    <Section title="See Your Changes">
-                        <ReloadInstructions />
-                    </Section>
-                    <Section title="Debug">
-                        <DebugInstructions />
-                    </Section>
-                    <Section title="Learn More">Read the docs to discover what to do next:</Section>
-                    <LearnMoreLinks />
+                    <Button title="Go to Screen2" onPress={() => navigation.push('Screen2')} />
                 </View>
             </ScrollView>
         </SafeAreaView>
